@@ -225,6 +225,5 @@ async def link(ctx,palavra : str):
     await ctx.send("Para usar o comando escreve .|. links mais a abreviatura do nome da cadeira ou para os links das gravações das aulas YT (AM2,ESTA,CT,PPP,TFM,YT)")
     
     
-client.run("NDYzMDU2NjEwNjgwNjM1NDAz.WzklEw.d_IYfBt1ClayLeumuC_PnHoVPX0")
 
 client.run("Token")
