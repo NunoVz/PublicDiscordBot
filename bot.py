@@ -22,8 +22,39 @@ async def roast(ctx,palavra : str):
   elif palavra == "carvalho":
         await ctx.send("Weeb do caralho, quando ele fuder com uma gaja o mundo acaba!!!")
   elif palavra == "hugo":
-        await ctx.send("Não era esse gajo que tinha crush na stora de ESTA?")
-
+        await ctx.send("Não era esse gajo que tinha crush na stora de ESTA?")   
+  elif palavra == "f1":
+        await ctx.send("@ugo#3644 bota f1?")
+      
+@client.command()
+async def states(ctx):
+  await ctx.send("USA? AMERICA? DESCONHEÇO. STATESSSSSSS")
+  await ctx.send("https://media.giphy.com/media/IyVBsIiRGhaso/giphy.gif")
+  await ctx.send(":regional_indicator_s: :regional_indicator_t: :regional_indicator_a: :cross: :regional_indicator_e: :regional_indicator_s:")
+#------------------------Status-----------------------
+@client.command()
+async def twitch(ctx,nome : str,link:str):
+  nome=nome.replace("|"," ")
+  try:
+    await client.change_presence(activity=discord.Streaming(name=nome, url=link))
+    await ctx.send("Status alterado para a stream de "+nome)
+  except:
+    await ctx.send("Introduziste mal os dados, .|. twitch (nome) (link da stream)")
+@client.command()
+async def status(ctx,palavra : str,palavra1:str):
+  palavra1=palavra1.replace("|"," ")
+  try:
+    if palavra=="song":
+      await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=palavra1))
+      await ctx.send("A ouvir "+palavra1)
+    elif palavra=="game":
+      await client.change_presence(activity=discord.Game(name=palavra1))
+      await ctx.send("A jogar  "+palavra1)
+    elif palavra=="movie":
+      await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=palavra1))
+      await ctx.send("A ver  "+palavra1)
+  except:
+      await ctx.send("Erro, .|. (song|game|movie) (nome)")
 
 #------------------------Musica-----------------------
 def musicas(a):
@@ -223,7 +254,12 @@ async def link(ctx,palavra : str):
     await ctx.send(embed = embed)
   elif palavra == "help":
     await ctx.send("Para usar o comando escreve .|. links mais a abreviatura do nome da cadeira ou para os links das gravações das aulas YT (AM2,ESTA,CT,PPP,TFM,YT)")
-    
-    
+ 
+@client.command()
+async def stream(ctx,palavra:str,link:str):
+  canais=[779490839419813921,776100586855596086,813430254601109544]
+  for i in range(len(canais)):
+    channel = client.get_channel(canais[i])
+    await channel.send("Guys o "+palavra+" esta on, venham ver\n"+link);
 
 client.run("Token")
