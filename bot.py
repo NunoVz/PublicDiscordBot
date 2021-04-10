@@ -10,27 +10,27 @@ client = commands.Bot(command_prefix=".|. ")
 @client.command()
 async def roast(ctx,palavra : str):
   if palavra == "meixedo":
-        await ctx.send("meixedo? esse gajo é alta gay")
+        await ctx.send("----")
   elif palavra == "santi":
-        await ctx.send("Passou a IPRP nem sabe como, mas tb vai pra DESIGNÉ pro ano")
+        await ctx.send("----")
   elif palavra == "machado":
-        await ctx.send("Esse gajo um dia ainda vai acabar com o stock de erva de coimbra")
+        await ctx.send("----")
   elif palavra == "moreira":
-        await ctx.send("Plat no lol carregado")
+        await ctx.send("----")
   elif palavra == "soveral":
-        await ctx.send("Noites magicas")
+        await ctx.send("----s")
   elif palavra == "carvalho":
-        await ctx.send("Weeb do caralho, quando ele fuder com uma gaja o mundo acaba!!!")
+        await ctx.send("----")
   elif palavra == "hugo":
-        await ctx.send("Não era esse gajo que tinha crush na stora de ESTA?")   
+        await ctx.send("----?")   
   elif palavra == "f1":
-        await ctx.send("@ugo#3644 bota f1?")
+        await ctx.send("----")
       
 @client.command()
 async def states(ctx):
-  await ctx.send("USA? AMERICA? DESCONHEÇO. STATESSSSSSS")
-  await ctx.send("https://media.giphy.com/media/IyVBsIiRGhaso/giphy.gif")
-  await ctx.send(":regional_indicator_s: :regional_indicator_t: :regional_indicator_a: :cross: :regional_indicator_e: :regional_indicator_s:")
+  await ctx.send("----")
+  await ctx.send("----")
+  await ctx.send("----")
 #------------------------Status-----------------------
 @client.command()
 async def twitch(ctx,nome : str,link:str):
